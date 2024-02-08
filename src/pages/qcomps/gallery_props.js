@@ -1,7 +1,44 @@
+/* eslint-disable @next/next/no-img-element */
+const Profile = ({person}) => {
+  return (
+    <>
+    <section className="person">
+      <h2>{person.name}</h2>
+      <img 
+        className="avatar"
+        src={`https://i.imgur.com/${person.img}.jpg`}
+        alt={person.name}
+        width={70}
+        height={70}
+      />
+      <ul>
+          <li>
+            <b>Profession: </b>
+            {person.profession}
+          </li>
+          <li>
+            <b>Awards: 4 </b>
+            (Nobel Prize in Physics, Nobel Prize in Chemistry, Davy Medal, Matteucci Medal)
+          </li>
+          <li>
+            <b>Discovered: </b>
+            {person.discovered}
+          </li>
+        </ul>
+      </section>
+    </>
+  )
+
+}
+
+
 export default function Gallery() {
   return (
     <div>
       <h1>Notable Scientists</h1>
+      {/* <Profile person={
+        name: "ma"
+      } /> */}
       <section className="profile">
         <h2>Maria Skłodowska-Curie</h2>
         <img
